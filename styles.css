@@ -339,15 +339,85 @@ footer {
   color: rgba(255,255,255,0.8);
 }
 
+/* Mobile Menu Button */
+.mobile-menu-btn {
+  display: none;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: auto;
+}
+
 /* Mobile Nav Adjustments */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
-    text-align: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
   }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
   nav {
-    justify-content: center;
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    background: rgba(11, 31, 79, 0.95);
+    padding: 1rem 0;
+    margin-top: 1rem;
+    border-radius: 0 0 8px 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   }
+
+  nav.active {
+    display: flex;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  nav a:last-child {
+    border-bottom: none;
+  }
+
+  nav a.cta-nav {
+    margin-top: 0.5rem;
+    display: inline-block;
+    width: auto;
+  }
+  
+  /* Typography Adjustments */
+  h1 {
+    font-size: 2rem;
+  }
+
+  section {
+    padding: 1.5rem 1rem;
+  }
+  
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* ================= CAROUSEL ================= */
