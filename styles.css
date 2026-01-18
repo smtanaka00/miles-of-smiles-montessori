@@ -365,13 +365,18 @@ footer {
 
   nav {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
     width: 100%;
     flex-direction: column;
-    background: rgba(11, 31, 79, 0.95);
+    background: rgba(11, 31, 79, 0.98);
     padding: 1rem 0;
-    margin-top: 1rem;
-    border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-top: 0;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    z-index: 1000;
   }
 
   nav.active {

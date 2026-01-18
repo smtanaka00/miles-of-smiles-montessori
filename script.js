@@ -125,6 +125,7 @@ document.addEventListener('DOMContentLoaded', () => {
       nav.classList.toggle('active');
       const isExpanded = nav.classList.contains('active');
       mobileBtn.setAttribute('aria-expanded', isExpanded);
+      mobileBtn.textContent = isExpanded ? '✕' : '☰';
     });
 
     // Close menu when clicking a link
@@ -132,6 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', () => {
         nav.classList.remove('active');
         mobileBtn.setAttribute('aria-expanded', 'false');
+        mobileBtn.textContent = '☰';
       });
     });
   }
