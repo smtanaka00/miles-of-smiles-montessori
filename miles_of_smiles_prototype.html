@@ -1,0 +1,255 @@
+<!-- ================= FILE: _shared-style.html (copy into each page <head>) ================= -->
+<style>
+:root{
+  --magenta:#d81b60;
+  --navy:#0b1f4f;
+  --yellow:#ffd54f;
+  --white:#ffffff;
+  --charcoal:#1f1f1f;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--white);color:var(--charcoal);line-height:1.6}
+header{background:linear-gradient(135deg,var(--magenta),var(--navy));padding:1rem 1rem 1.5rem;text-align:center}
+nav{display:flex;flex-wrap:wrap;justify-content:center;gap:1rem;margin-bottom:.5rem}
+nav a{text-decoration:none;color:var(--white);font-weight:600}
+section{padding:2rem 1rem;max-width:1000px;margin:0 auto}
+.cta{display:inline-block;background:var(--magenta);color:white;padding:.7rem 1.2rem;border-radius:999px;text-decoration:none;font-weight:600}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.card{background:white;border-radius:16px;padding:1rem;box-shadow:0 4px 10px rgba(0,0,0,.08);border-top:4px solid var(--magenta)}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
+.gallery div{aspect-ratio:4/3;border-radius:12px;background:var(--yellow)}
+form{background:white;padding:1rem;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,.08);margin-bottom:1rem;border-left:4px solid var(--magenta)}
+label{display:block;margin-top:.6rem}
+input,textarea{width:100%;padding:.5rem;margin-top:.3rem;border-radius:8px;border:1px solid #ddd}
+button{margin-top:.8rem;background:var(--navy);color:white;border:none;padding:.6rem 1rem;border-radius:999px;font-weight:600;cursor:pointer}
+.thank-you{display:none;background:var(--yellow);padding:1rem;border-radius:12px;margin-top:.8rem}
+.game{background:white;padding:1rem;border-radius:16px;box-shadow:0 4px 10px rgba(0,0,0,.08);text-align:center;border:2px dashed var(--magenta)}
+.match-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.5rem;max-width:400px;margin:1rem auto 0}
+.tile{aspect-ratio:1/1;border-radius:12px;background:var(--yellow);display:flex;align-items:center;justify-content:center;font-size:1.6rem;cursor:pointer}
+.tile.flipped{background:var(--magenta);color:white}
+.tile.matched{background:var(--navy);color:white;cursor:default}
+footer{background:linear-gradient(135deg,var(--navy),var(--magenta));color:white;padding:1.5rem 1rem;text-align:center;font-size:.9rem}
+footer a{color:var(--yellow)}
+@media (min-width:700px){.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}}
+</style>
+
+<!-- ================= FILE: _shared-header.html ================= -->
+<header>
+<nav>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="programs.html">Programs</a>
+<a href="gallery.html">Gallery</a>
+<a href="parents.html">Parents</a>
+<a href="tour.html">Request a Tour</a>
+<a href="contact.html">Contact</a>
+</nav>
+</header>
+
+<!-- ================= FILE: _shared-footer.html ================= -->
+<footer>
+<p>25A Herbert Chitepo Street, Bulawayo | +263 29 882 275 or +263 78 553 6660</p>
+<p>Mon-Fri 7:00 AM - 6:00 PM | Sat 8:00 AM - 2:00 PM | Sun Closed</p>
+<p><a href="https://www.facebook.com/share/1GpRpe1Vyj/?mibextid=wwXIfr" target="_blank">Facebook</a></p>
+<p>© Miles of Smiles Montessori Bulawayo</p>
+</footer>
+
+
+<!-- ================= FILE: index.html ================= -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Miles of Smiles Montessori</title>
+<!-- paste _shared-style here -->
+</head><body>
+<!-- paste _shared-header here -->
+<section style="text-align:center">
+<h1>Miles of Smiles Montessori</h1>
+<p><strong>Nurturing Young Minds Through Play and Discovery</strong></p>
+<p>Child-centered learning in a safe, caring, Zimbabwean-rooted Montessori environment.</p>
+<a class="cta" href="tour.html">Book a Tour</a>
+</section>
+<section>
+<h2>Welcome</h2>
+<p>We serve children from 6 months to 6 years with hands-on, play-based learning that builds independence, confidence, and creativity while celebrating local culture and community.</p>
+</section>
+<!-- paste _shared-footer here -->
+</body></html>
+
+
+<!-- ================= FILE: about.html ================= -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us</title>
+<!-- paste _shared-style here -->
+</head><body>
+<!-- paste _shared-header here -->
+<section>
+<h1>About Us</h1>
+<p>Miles of Smiles Montessori serves children from <strong>6 months to 6 years</strong> in Bulawayo.</p>
+<p>We follow authentic Montessori principles while adapting them to Zimbabwean life through African stories, outdoor learning, traditional music, and community values.</p>
+<p>Our classrooms emphasize independence, concentration, respect, and joyful discovery.</p>
+<div class="gallery">
+<div></div><div></div><div></div>
+</div>
+</section>
+<!-- paste _shared-footer here -->
+</body></html>
+
+
+<!-- ================= FILE: programs.html ================= -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Programs</title>
+<!-- paste _shared-style here -->
+</head><body>
+<!-- paste _shared-header here -->
+<section>
+<h1>Our Programs</h1>
+<div class="grid">
+<div class="card"><h3>Practical Life</h3><p>Pouring, sorting, cleaning, and caring for self and environment.</p></div>
+<div class="card"><h3>Sensory</h3><p>Refining sight, sound, touch, smell, and movement.</p></div>
+<div class="card"><h3>Math</h3><p>Concrete materials build logical thinking and number sense.</p></div>
+<div class="card"><h3>Language</h3><p>Storytelling, early reading, and exposure to local languages.</p></div>
+<div class="card"><h3>Art & Music</h3><p>Creative expression with rhythm and traditional instruments.</p></div>
+<div class="card"><h3>Science & Nature</h3><p>Gardening, observation, and outdoor exploration.</p></div>
+</div>
+<p><strong>Key benefits:</strong> independence, concentration, problem-solving, social skills, and joy in learning.</p>
+</section>
+<!-- paste _shared-footer here -->
+</body></html>
+
+
+<!-- ================= FILE: gallery.html ================= -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Gallery</title>
+<!-- paste _shared-style here -->
+</head><body>
+<!-- paste _shared-header here -->
+<section>
+<h1>Gallery</h1>
+<div class="gallery">
+<div></div><div></div><div></div><div></div>
+</div>
+</section>
+<!-- paste _shared-footer here -->
+</body></html>
+
+
+<!-- ================= FILE: parents.html ================= -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Parents</title>
+<!-- paste _shared-style here -->
+</head><body>
+<!-- paste _shared-header here -->
+<section>
+<h1>Parent Resources</h1>
+<div class="grid">
+<div class="card"><h3>Benefits of Montessori in Zimbabwe</h3><p>How child-led learning builds confidence and cultural pride.</p></div>
+<div class="card"><h3>Learning at Home</h3><p>Low-cost activities using everyday household materials.</p></div>
+<div class="card"><h3>Preparing for School</h3><p>Routines, independence, and emotional readiness.</p></div>
+</div>
+
+<h2>Try a Montessori Matching Activity</h2>
+<div class="game">
+<p>Tap two tiles to find a matching pair.</p>
+<div class="match-grid" id="matchGrid"></div>
+<div id="gameMsg"></div>
+</div>
+</section>
+<!-- paste _shared-footer here -->
+<script>
+const emojis=['🌿','🌿','🐘','🐘','🎶','🎶','🌞','🌞'];
+let tiles=emojis.sort(()=>0.5-Math.random());
+let first=null,lock=false,matched=0;
+const grid=document.getElementById('matchGrid');
+const msg=document.getElementById('gameMsg');
+
+tiles.forEach((e,i)=>{
+ const d=document.createElement('div');d.className='tile';d.dataset.index=i;
+ d.addEventListener('click',()=>flip(d));grid.appendChild(d);
+});
+function flip(tile){
+ if(lock||tile.classList.contains('matched')||tile===first) return;
+ tile.textContent=tiles[tile.dataset.index];tile.classList.add('flipped');
+ if(!first){first=tile;return;}
+ lock=true;
+ if(tile.textContent===first.textContent){
+  tile.classList.add('matched');first.classList.add('matched');matched+=2;reset();
+  if(matched===tiles.length) msg.textContent='Well done, you matched all pairs';
+ } else {
+  setTimeout(()=>{tile.textContent='';first.textContent='';tile.classList.remove('flipped');first.classList.remove('flipped');reset();},800);
+ }
+}
+function reset(){first=null;lock=false;}
+</script>
+</body></html>
+
+
+<!-- ================= FILE: tour.html ================= -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Request a Tour</title>
+<!-- paste _shared-style here -->
+</head><body>
+<!-- paste _shared-header here -->
+<section>
+<h1>Request a School Tour</h1>
+<p>We love welcoming families to see our classrooms, meet our teachers, and experience Montessori in action.</p>
+<form id="tourForm">
+<label>Name<input required/></label>
+<label>Email<input type="email" required/></label>
+<label>Phone<input required/></label>
+<label>Child’s Age<input required/></label>
+<label>Preferred Day<textarea rows="2"></textarea></label>
+<label>Message<textarea rows="3"></textarea></label>
+<button type="submit">Send Request</button>
+<div class="thank-you">Thank you, we will contact you to confirm your visit.</div>
+</form>
+</section>
+<!-- paste _shared-footer here -->
+<script>
+document.getElementById('tourForm').addEventListener('submit',function(e){e.preventDefault();this.querySelector('.thank-you').style.display='block';});
+</script>
+</body></html>
+
+
+<!-- ================= FILE: contact.html ================= -->
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact</title>
+<!-- paste _shared-style here -->
+</head><body>
+<!-- paste _shared-header here -->
+<section>
+<h1>Contact & Registration</h1>
+<p>25A Herbert Chitepo Street, Bulawayo</p>
+<p>+263 29 882 275 or +263 78 553 6660</p>
+<p><a href="https://www.facebook.com/share/1GpRpe1Vyj/?mibextid=wwXIfr" target="_blank">Visit our Facebook page</a></p>
+<div class="two-col">
+<form id="regForm">
+<h3>Register Interest</h3>
+<label>Parent Name<input required/></label>
+<label>Child Name<input required/></label>
+<label>Child Age<input required/></label>
+<label>Preferred Start Date<input type="date"/></label>
+<label>Contact Details<input required/></label>
+<button type="submit">Submit</button>
+<div class="thank-you">Thank you for your interest.</div>
+</form>
+<form id="callbackForm">
+<h3>Request a Callback</h3>
+<label>Name<input required/></label>
+<label>Phone<input required/></label>
+<button type="submit">Call Me</button>
+<div class="thank-you">We will call you soon.</div>
+</form>
+</div>
+<form id="newsForm">
+<h3>Newsletter Signup</h3>
+<label>Email<input type="email" required/></label>
+<button type="submit">Subscribe</button>
+<div class="thank-you">You’re subscribed.</div>
+</form>
+</section>
+<!-- paste _shared-footer here -->
+<script>
+['regForm','callbackForm','newsForm'].forEach(id=>{
+ document.getElementById(id).addEventListener('submit',function(e){e.preventDefault();this.querySelector('.thank-you').style.display='block';});
+});
+</script>
+</body></html>
