@@ -697,3 +697,142 @@ footer {
   height: 24px;
   fill: currentColor;
 }
+
+/* ================= PROGRAMS SECTION ================= */
+.programs-section {
+  background: var(--light-gray);
+  padding: 3rem 1rem;
+  margin: 0;
+  max-width: 100%;
+}
+
+.programs-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.program-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-top: 5px solid var(--magenta);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.program-card h3 {
+  color: var(--navy);
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-family: var(--font-heading);
+}
+
+.program-card p {
+  color: var(--charcoal);
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ================= WHY CHOOSE US SECTION ================= */
+.why-choose-section {
+  padding: 3rem 1rem;
+}
+
+.why-choose-section h2 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  font-size: 2.2rem;
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.highlight-item {
+  text-align: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.highlight-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-icon {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 1rem;
+  background: linear-gradient(135deg, var(--magenta), var(--navy));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  transition: transform 0.3s;
+}
+
+.highlight-item:hover .highlight-icon {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.highlight-icon svg {
+  width: 36px;
+  height: 36px;
+}
+
+.highlight-item h4 {
+  color: var(--navy);
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-family: var(--font-heading);
+}
+
+.highlight-item p {
+  color: var(--charcoal);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+
+  .programs-section h2,
+  .why-choose-section h2 {
+    font-size: 1.8rem;
+  }
+
+  .programs-grid,
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .program-card,
+  .highlight-item {
+    padding: 1.5rem;
+  }
+}
