@@ -65,13 +65,82 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function initContactForms() {
+    // Registration Form
+    const regForm = document.getElementById('regForm');
+    if (regForm) {
+      regForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const parent = document.getElementById('regParentName').value;
+        const child = document.getElementById('regChildName').value;
+        const age = document.getElementById('regChildAge').value;
+        const date = document.getElementById('regStartDate').value;
+        const contact = document.getElementById('regContact').value;
+        
+        const subject = encodeURIComponent(`Registration Interest: ${child}`);
+        const body = encodeURIComponent(`Parent Name: ${parent}\nChild Name: ${child}\nChild Age: ${age}\nPreferred Start Date: ${date}\nContact Details: ${contact}`);
+        
+        window.location.href = `mailto:milesofsmiling@gmail.com?subject=${subject}&body=${body}`;
+        
+        const thanks = document.getElementById('regThankYou');
+        if (thanks) thanks.style.display = 'block';
+        regForm.reset();
+      });
+    }
+
+    // Callback Form
+    const cbForm = document.getElementById('callbackForm');
+    if (cbForm) {
+      cbForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('cbName').value;
+        const phone = document.getElementById('cbPhone').value;
+        
+        const subject = encodeURIComponent(`Callback Request: ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nPhone: ${phone}`);
+        
+        window.location.href = `mailto:milesofsmiling@gmail.com?subject=${subject}&body=${body}`;
+        
+        const thanks = document.getElementById('cbThankYou');
+        if (thanks) thanks.style.display = 'block';
+        cbForm.reset();
+      });
+    }
+
+    // Tour Form
+    const tourForm = document.getElementById('tourForm');
+    if (tourForm) {
+      tourForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const name = document.getElementById('tourName').value;
+        const email = document.getElementById('tourEmail').value;
+        const phone = document.getElementById('tourPhone').value;
+        const childAge = document.getElementById('tourChildAge').value;
+        const preferredDay = document.getElementById('tourPreferredDay').value;
+        const message = document.getElementById('tourMessage').value;
+        
+        const subject = encodeURIComponent(`Tour Request: ${name}`);
+        const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\nPhone: ${phone}\nChild's Age: ${childAge}\nPreferred Day: ${preferredDay}\nMessage: ${message}`);
+        
+        window.location.href = `mailto:milesofsmiling@gmail.com?subject=${subject}&body=${body}`;
+        
+        const thanks = document.getElementById('tourThankYou');
+        if (thanks) thanks.style.display = 'block';
+        tourForm.reset();
+      });
+    }
+  }
+
+  // Initialize static forms immediately
+  initContactForms();
+
   // --- Load Components ---
   // We load header and footer, then initialize their specific scripts
   loadComponent('header-placeholder', 'components/header.html', () => {
     initMobileMenu();
     // Highlight current page in nav
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-    const navLinks = document.querySelectorAll('nav a');
+    const navLinks = document.querySelectorAll('nav a:not(.cta-nav)');
     navLinks.forEach(link => {
       if (link.getAttribute('href') === currentPage) {
         link.style.color = 'var(--yellow)';

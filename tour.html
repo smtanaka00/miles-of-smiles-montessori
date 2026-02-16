@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request a Tour | Miles of Smiles Montessori</title>
+  <title>Book a School Tour | Visit Miles of Smiles Montessori</title>
+  <meta name="description"
+    content="Schedule a visit to experience our Montessori environment firsthand. See our classrooms, meet our teachers, and ask questions.">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -16,14 +18,14 @@
     <h1>Request a School Tour</h1>
     <p>We love welcoming families to see our classrooms, meet our teachers, and experience Montessori in action.</p>
     <form id="tourForm">
-      <label>Name<input required /></label>
-      <label>Email<input type="email" required /></label>
-      <label>Phone<input required /></label>
-      <label>Child’s Age<input required /></label>
-      <label>Preferred Day<textarea rows="2"></textarea></label>
-      <label>Message<textarea rows="3"></textarea></label>
+      <label>Name<input id="tourName" required /></label>
+      <label>Email<input type="email" id="tourEmail" required /></label>
+      <label>Phone<input id="tourPhone" required /></label>
+      <label>Child’s Age<input id="tourChildAge" required /></label>
+      <label>Preferred Day<textarea rows="2" id="tourPreferredDay"></textarea></label>
+      <label>Message<textarea rows="3" id="tourMessage"></textarea></label>
       <button type="submit">Send Request</button>
-      <div class="thank-you">Thank you, we will contact you to confirm your visit.</div>
+      <div class="thank-you" id="tourThankYou">Opening email draft...</div>
     </form>
   </section>
 

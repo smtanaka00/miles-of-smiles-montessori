@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Miles of Smiles Montessori</title>
+  <title>Contact Us | Register or Request a Call | Miles of Smiles</title>
+  <meta name="description"
+    content="Get in touch with Miles of Smiles Montessori. Call us, visit our Bulawayo campus, or register your interest online. We look forward to meeting you!">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -21,20 +23,20 @@
     <div class="two-col">
       <form id="regForm">
         <h3>Register Interest</h3>
-        <label>Parent Name<input required /></label>
-        <label>Child Name<input required /></label>
-        <label>Child Age<input required /></label>
-        <label>Preferred Start Date<input type="date" /></label>
-        <label>Contact Details<input required /></label>
+        <label>Parent Name<input id="regParentName" required /></label>
+        <label>Child Name<input id="regChildName" required /></label>
+        <label>Child Age<input id="regChildAge" required /></label>
+        <label>Preferred Start Date<input type="date" id="regStartDate" /></label>
+        <label>Contact Details<input id="regContact" required /></label>
         <button type="submit">Submit</button>
-        <div class="thank-you">Thank you for your interest.</div>
+        <div class="thank-you" id="regThankYou">Opening email draft...</div>
       </form>
       <form id="callbackForm">
         <h3>Request a Callback</h3>
-        <label>Name<input required /></label>
-        <label>Phone<input required /></label>
+        <label>Name<input id="cbName" required /></label>
+        <label>Phone<input id="cbPhone" required /></label>
         <button type="submit">Call Me</button>
-        <div class="thank-you">We will call you soon.</div>
+        <div class="thank-you" id="cbThankYou">Opening email draft...</div>
       </form>
     </div>
     <form id="newsForm">
